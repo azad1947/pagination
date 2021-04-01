@@ -29,7 +29,7 @@ function PaginationWithElasticSearch() {
         window.localStorage.setItem('e-latestPage', JSON.stringify(1));
     }
     useEffect(() => {
-        axios.get(`http://localhost:5000/movies/${id}`)
+        axios.get(`http://localhost:5000/pagination/with-es/${id}`)
             .then(result => {
                 console.log('result--->', result)
                 setCount(result.data.count);

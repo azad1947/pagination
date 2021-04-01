@@ -30,7 +30,7 @@ function PaginationWithMongo() {
         window.localStorage.setItem('m-latestPage', JSON.stringify(1));
     }
     useEffect(() => {
-        axios.get(`http://localhost:5000/movie/${id}`)
+        axios.get(`http://localhost:5000/pagination/with-mongo/${id}`)
             .then(result => {
                 setCount(result.data.count);
                 setData(result.data.doc);
